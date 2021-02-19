@@ -1,0 +1,8 @@
+name: Run ESLint
+description: Runing ESLint checks
+
+runs:
+  using: composite
+  steps:
+    - run: npx exlint .
+      shell: bash

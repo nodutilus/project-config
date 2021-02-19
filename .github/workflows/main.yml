@@ -19,4 +19,4 @@ jobs:
           check-latest: true
       - run: npm install
 
-      - run: npx eslint .
+      - uses: ./eslint
