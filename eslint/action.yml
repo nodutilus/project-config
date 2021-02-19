@@ -4,11 +4,11 @@ description: Runing ESLint checks
 runs:
   using: composite
   steps:
-    - run: echo npx eslint .
+    - run: echo npx eslint . --ext .js,.cjs,.mjs --max-warnings 0
       shell: bash
-    - run: npx eslint .
+    - run: npx eslint . --ext .js,.cjs,.mjs --max-warnings 0
       shell: bash
-    - run: echo npx eslintcc .
+    - run: echo npx eslintcc . --greater-than C --show-rules
       shell: bash
-    - run: npx eslintcc .
+    - run: npx eslintcc . --greater-than C --show-rules
       shell: bash
