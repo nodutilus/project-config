@@ -1,0 +1,24 @@
+{
+  "name": "@nodutilus/project-config",
+  "description": "Node.js utilities - projects shared configuration",
+  "repository": "github:nodutilus/eslint-config",
+  "license": "Unlicense",
+  "homepage": "https://github.com/nodutilus",
+  "type": "module",
+  "exports": {
+    "./node-base": "./node-base.json"
+  },
+  "engines": {
+    "node": ">=15"
+  },
+  "dependencies": {
+    "eslint": "latest",
+    "eslint-config-standard": "latest",
+    "eslintcc": "latest"
+  },
+  "peerDependencies": {
+    "eslint": "latest",
+    "eslint-config-standard": "latest",
+    "eslintcc": "latest"
+  }
+}
