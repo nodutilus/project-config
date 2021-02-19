@@ -6,3 +6,5 @@ runs:
   steps:
     - run: npx eslint .
       shell: bash
+    - run: npx eslintcc .
+      shell: bash
