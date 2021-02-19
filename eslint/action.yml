@@ -4,7 +4,11 @@ description: Runing ESLint checks
 runs:
   using: composite
   steps:
+    - run: echo npx eslint .
+      shell: bash
     - run: npx eslint .
+      shell: bash
+    - run: echo npx eslintcc .
       shell: bash
     - run: npx eslintcc .
       shell: bash
