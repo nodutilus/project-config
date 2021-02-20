@@ -4,6 +4,8 @@ description: Runing ESLint checks
 runs:
   using: composite
   steps:
+    - run: npm install
+      shell: bash
     - run: echo npx eslint . --ext .js,.cjs,.mjs --max-warnings 0
       shell: bash
     - run: npx eslint . --ext .js,.cjs,.mjs --max-warnings 0
