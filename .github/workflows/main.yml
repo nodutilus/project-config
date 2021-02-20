@@ -14,7 +14,7 @@ jobs:
     steps:
       - run: node --version
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/setup-node@init-config
+      - uses: nodutilus/project-config/setup-node-latest@init-config
       - run: node --version
 
       - uses: actions/setup-node@main
