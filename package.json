@@ -6,6 +6,7 @@
   "homepage": "https://github.com/nodutilus",
   "type": "module",
   "exports": {
+    "./eslint": "./eslint/node-latest.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs"
   },
   "engines": {
