@@ -1,6 +1,8 @@
 {
   "type": "module",
   "dependencies": {
+    "@actions/core": "latest",
+    "@actions/github": "latest",
     "@actions/setup-node": "github:actions/setup-node#main"
   }
 }
