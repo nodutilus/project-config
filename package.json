@@ -12,7 +12,7 @@
   "engines": {
     "node": ">=15"
   },
-  "dependencies1": {
+  "dependencies": {
     "@babel/core": "latest",
     "@babel/eslint-parser": "latest",
     "@babel/plugin-proposal-class-properties": "latest",
