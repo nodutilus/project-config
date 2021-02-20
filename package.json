@@ -13,8 +13,8 @@
     "node": ">=15"
   },
   "dependencies": {
+    "@babel/eslint-parser": "latest",
     "eslint": "latest",
-    "babel-eslint": "latest",
     "eslint-config-standard": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-node": "latest",
