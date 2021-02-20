@@ -12,15 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: node --version
       - uses: actions/checkout@main
       - uses: nodutilus/project-config/setup-node-latest@init-config
-      - run: node --version
-
-      - uses: actions/setup-node@main
-        with:
-          node-version: ">=15"
-          check-latest: true
-      - run: node --version
 
       - uses: nodutilus/project-config/eslint@init-config
