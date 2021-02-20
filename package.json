@@ -13,7 +13,9 @@
     "node": ">=15"
   },
   "dependencies": {
+    "@babel/core": "latest",
     "@babel/eslint-parser": "latest",
+    "@babel/plugin-proposal-class-properties": "latest",
     "eslint": "latest",
     "eslint-config-standard": "latest",
     "eslint-plugin-import": "latest",
