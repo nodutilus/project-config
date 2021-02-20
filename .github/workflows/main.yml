@@ -13,7 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/actions@init-config
       - uses: nodutilus/project-config/actions/setup-node-latest@init-config
       - uses: nodutilus/project-config/actions/setup-npm@init-config
       - uses: nodutilus/project-config/actions/eslint@init-config

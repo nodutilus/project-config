@@ -4,4 +4,5 @@ author: IgorNovozhilov
 
 runs:
   using: "node12"
-  main: "./setup-npm.cjs"
+  pre: "setup-own-dependencies.cjs"
+  main: "setup-npm.cjs"
