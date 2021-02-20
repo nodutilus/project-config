@@ -18,9 +18,9 @@ runs:
       shell: bash
     - run: npm install @actions/core@latest github:actions/setup-node#main
       shell: bash
-    - run: echo node ./setup-node.js
+    - run: echo node ${{ github.action_path }}/setup-node.js
       shell: bash
-    - run: node ./setup-node.js
+    - run: node ${{ github.action_path }}/setup-node.js
       shell: bash
     - run: node --version
       shell: bash
