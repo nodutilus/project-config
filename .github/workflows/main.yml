@@ -8,9 +8,7 @@ on:
 jobs:
   checks:
     name: Checks with Linters
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@main
       - uses: nodutilus/project-config/actions/setup-node-latest@init-config
