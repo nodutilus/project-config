@@ -1,4 +1,3 @@
-const { execSync } = require('child_process')
 const core = require('@actions/core')
 const github = require('@actions/github')
 
@@ -21,12 +20,6 @@ async function run() {
 
   core.info('run actions/setup-node#main')
   require('setup-node/dist/index.js')
-
-  execSync('npm install', {
-    cwd: __dirname,
-    encoding: 'utf-8',
-    stdio: ['inherit', 'inherit', 'inherit']
-  })
 }
 
 run().catch(error => {
