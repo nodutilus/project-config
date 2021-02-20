@@ -4,4 +4,4 @@ author: IgorNovozhilov
 
 runs:
   using: "node12"
-  main: "setup-npm.cjs"
+  main: "./setup-npm.cjs"
