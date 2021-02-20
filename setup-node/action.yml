@@ -8,7 +8,10 @@ inputs:
     description: "Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0"
     required: false
     default: "12"
-
+  token:
+    description: Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
+    required: false
+    default: ${{ github.token }}
 runs:
   using: 'node12'
   main: 'setup-node.cjs'

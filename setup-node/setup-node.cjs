@@ -12,7 +12,7 @@ execSync('npm install ' +
 const core = require('@actions/core')
 const github = require('@actions/github')
 
-const octokit = github.getOctokit(github.context.token)
+const octokit = github.getOctokit(core.getInput('token'))
 
 async function run() {
   core.info(`node-version: ${core.getInput('node-version')}`)
