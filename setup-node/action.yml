@@ -7,7 +7,7 @@ inputs:
   node-version:
     description: "Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0"
     required: false
-    default: ">=14"
+    default: "=12"
 
 runs:
   using: composite
@@ -26,5 +26,5 @@ runs:
       shell: bash
     - run: echo npm install
       shell: bash
-    - run: node npm install
+    - run: npm install
       shell: bash
