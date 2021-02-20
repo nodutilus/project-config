@@ -8,9 +8,6 @@ execSync('npm install @actions/core@latest github:actions/setup-node#main', {
 
 const core = require('@actions/core');
 
-const myInput = core.getInput('node-version');
-
-core.info('test:')
-core.info(myInput)
-
-// require('setup-node/dist/index.js')
+core.info(`'node-version: ${core.getInput('node-version')}`)
+core.info('run setup-node/dist/index.js:')
+require('setup-node/dist/index.js')
