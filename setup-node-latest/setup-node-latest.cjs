@@ -13,7 +13,7 @@ async function run() {
     version = (await octokit.repos.getLatestRelease({
       owner: 'nodejs',
       repo: 'node'
-    })).data
+    })).data.tag_name
 
     core.info(`resolved latest node-version: ${JSON.stringify(version)}`)
     process.env['INPUT_NODE-VERSION'] = version
