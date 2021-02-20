@@ -2,6 +2,7 @@ const core = require('@actions/core');
 
 const myInput = core.getInput('node-version');
 
-console.log(myInput)
+core.info('test:')
+core.info(myInput)
 
 // require('setup-node/dist/index.js')
