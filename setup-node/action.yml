@@ -14,13 +14,13 @@ runs:
   steps:
     - run: node --version
       shell: bash
-    - run: echo npm install github:actions/setup-node#main
+    - run: echo npm install @actions/core@latest github:actions/setup-node#main
       shell: bash
-    - run: npm install github:actions/setup-node#main
+    - run: npm install @actions/core@latest github:actions/setup-node#main
       shell: bash
-    - run: echo node node_modules/setup-node/dist/index.js
+    - run: echo node ./setup-node.js
       shell: bash
-    - run: node node_modules/setup-node/dist/index.js
+    - run: node ./setup-node.js
       shell: bash
     - run: node --version
       shell: bash
