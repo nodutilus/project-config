@@ -19,4 +19,4 @@ jobs:
           check-latest: true
       - run: npm install
 
-      - uses: nodutilus/project-config/eslint
+      - uses: nodutilus/project-config/eslint@init-config
