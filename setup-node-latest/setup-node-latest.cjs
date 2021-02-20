@@ -10,10 +10,10 @@ async function run() {
   } else {
     const octokit = github.getOctokit(core.getInput('token'))
 
-    version = await octokit.repos.getLatestRelease({
+    version = (await octokit.repos.getLatestRelease({
       owner: 'nodejs',
       repo: 'node'
-    })
+    })).data
 
     core.info(`resolved latest node-version: ${JSON.stringify(version)}`)
     process.env['INPUT_NODE-VERSION'] = version
