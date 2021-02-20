@@ -1,8 +1,9 @@
 const { execSync } = require('child_process')
-const core = require('@actions/core')
 
-core.info('npm install')
-execSync('npm install', {
+execSync('npm install ' +
+  '@actions/core@latest ' +
+  '@actions/github@latest ', {
+  cwd: __dirname,
   encoding: 'utf-8',
   stdio: ['inherit', 'inherit', 'inherit']
 })
