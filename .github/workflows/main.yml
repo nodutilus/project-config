@@ -13,10 +13,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-        with:
-          node-version: ">=14"
-          check-latest: true
+      - uses: nodutilus/project-config/setup-node@init-config
+
+      # - uses: actions/setup-node@main
+      #   with:
+      #     node-version: ">=14"
+      #     check-latest: true
       # - run: npm install
 
       - uses: nodutilus/project-config/eslint@init-config

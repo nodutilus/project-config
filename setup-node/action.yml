@@ -1,0 +1,16 @@
+name: "Setup Node.js environment <extended>"
+description: Setup a Node.js <latest> environment, install dependencies.
+  Extends <https://github.com/actions/setup-node>
+author: IgorNovozhilov
+
+runs:
+  using: composite
+  steps:
+    - run: echo npm install github:actions/setup-node#main
+      shell: bash
+    - run: npm install github:actions/setup-node#main
+      shell: bash
+    - run: echo node node_modules/setup-node/dist/index.js
+      shell: bash
+    - run: node node_modules/setup-node/dist/index.js
+      shell: bash
