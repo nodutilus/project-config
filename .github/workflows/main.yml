@@ -12,13 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: node --version
       - uses: actions/checkout@main
       - uses: nodutilus/project-config/setup-node@init-config
 
-      # - uses: actions/setup-node@main
-      #   with:
-      #     node-version: ">=14"
-      #     check-latest: true
-      # - run: npm install
+      - uses: actions/setup-node@main
+        with:
+          node-version: "12"
+          check-latest: true
+      - run: node --version
 
       - uses: nodutilus/project-config/eslint@init-config
