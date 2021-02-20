@@ -1,7 +1,0 @@
-name: "Setup @nodutilus/project-config GH-Actions"
-description: "Setup a common environment for @nodutilus/project-config GH-Actions"
-author: IgorNovozhilov
-
-runs:
-  using: "node12"
-  main: "action.cjs"
