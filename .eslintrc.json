@@ -1,0 +1,11 @@
+{
+  "extends": "./eslint/node-latest.cjs",
+  "overrides": [
+    {
+      "files": [
+        "*/.cjs"
+      ],
+      "extends": "./eslint/node-latest.cjs"
+    }
+  ]
+}
