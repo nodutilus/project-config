@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "latest",
+    "@actions/github": "latest"
+  }
+}

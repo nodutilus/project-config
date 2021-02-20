@@ -18,8 +18,8 @@ async function run() {
     process.env['INPUT_NODE-VERSION'] = version
   }
 
-  core.info('run actions/setup-node#main')
-  require('setup-node/dist/index.js')
+  core.info('run github:actions/setup-node#main')
+  require('@actions/setup-node/dist/index.js')
 }
 
 run().catch(error => {

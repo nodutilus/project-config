@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@main
-      - uses: nodutilus/project-config@init-config
-      - uses: nodutilus/project-config/setup-node-latest@init-config
-      - uses: nodutilus/project-config/setup-npm@init-config
-      - uses: nodutilus/project-config/eslint@init-config
+      - uses: actions/checkout
+      - uses: nodutilus/project-config/actions@init-config
+      - uses: nodutilus/project-config/actions/setup-node-latest@init-config
+      - uses: nodutilus/project-config/actions/setup-npm@init-config
+      - uses: nodutilus/project-config/actions/eslint@init-config
+      - uses: nodutilus/project-config/actions/eslintcc@init-config

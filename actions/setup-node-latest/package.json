@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@actions/setup-node": "github:actions/setup-node#main"
+  }
+}

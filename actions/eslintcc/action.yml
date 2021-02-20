@@ -1,0 +1,10 @@
+name: Run ESLintCC
+description: Runing ESLintCC checks
+
+runs:
+  using: composite
+  steps:
+    - run: echo npx eslintcc . --greater-than C --show-rules
+      shell: bash
+    - run: npx eslintcc . --greater-than C --show-rules
+      shell: bash
