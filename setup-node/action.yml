@@ -15,16 +15,13 @@ runs:
     - run: node --version
       shell: bash
 
-    - run: echo cd ${{ github.action_path }} && cd ${{ github.action_path }}
-      shell: bash
-
     - run: echo npm install @actions/core@latest github:actions/setup-node#main
       shell: bash
-    - run: npm install @actions/core@latest github:actions/setup-node#main
+    - run: cd ${{ github.action_path }} || npm install @actions/core@latest github:actions/setup-node#main
       shell: bash
     - run: echo node ${{ github.action_path }}/setup-node.cjs
       shell: bash
-    - run: node ${{ github.action_path }}/setup-node.cjs
+    - run:  cd ${{ github.action_path }} || node ./setup-node.cjs
       shell: bash
     - run: node --version
       shell: bash
