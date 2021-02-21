@@ -9,19 +9,15 @@ async function run() {
   } else {
     const octokit = github.getOctokit(core.getInput('token'))
 
-    const result = (await octokit.graphql(`
-      {
-        repository(owner: "nodejs", name: "node") {
-          releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
-            nodes {
-              tagName
-            }
-          }
+    const releases = (await octokit.graphql(`{
+      repository(owner: "nodejs", name: "node") {
+        releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
+          nodes { tagName }
         }
       }
-    `)).repository.releases;
+    }`)).repository.releases.nodes;
 
-    core.info(JSON.stringify(result))
+    core.info(JSON.stringify(releases))
 
     version = (await octokit.repos.getLatestRelease({
       owner: 'nodejs',
