@@ -14,7 +14,6 @@ async function run() {
         repository(owner: "nodejs", name: "node") {
           releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
             edges {
-              cursor
               node {
                 tagName
               }
@@ -22,13 +21,6 @@ async function run() {
             nodes {
               tagName
             }
-            pageInfo {
-              endCursor
-              hasNextPage
-              hasPreviousPage
-              startCursor
-            }
-            totalCount
           }
         }
       }
