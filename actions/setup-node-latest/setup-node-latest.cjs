@@ -9,7 +9,7 @@ async function run() {
   } else {
     const octokit = github.getOctokit(core.getInput('token'))
 
-    const result = await octokit.graphql(`
+    const result = (await octokit.graphql(`
       {
         repository(owner: "nodejs", name: "node") {
           releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
@@ -21,7 +21,7 @@ async function run() {
           }
         }
       }
-    `);
+    `)).repository.releases;
 
     core.info(JSON.stringify(result))
 
