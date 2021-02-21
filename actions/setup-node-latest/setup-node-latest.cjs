@@ -1,5 +1,6 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
+const semver = require('semver')
 
 async function run() {
   let version = core.getInput('node-version')
@@ -8,21 +9,20 @@ async function run() {
     core.info(`manually input node-version: ${version}`)
   } else {
     const octokit = github.getOctokit(core.getInput('token'))
-
     const releases = (await octokit.graphql(`{
       repository(owner: "nodejs", name: "node") {
         releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
           nodes { tagName }
         }
       }
-    }`))
-      .repository.releases.nodes
-      .reduce((items, item) => {
-        items.push(item)
-        return items
-      }, []);
+    }`)).repository.releases.nodes
+
+    version = releases.reduce((latest, item) => {
+      return semver.gt(latest, item.tagName) ? latest : item.tagName
+    }, '0')
 
     core.info(JSON.stringify(releases))
+    core.info(`latest version: ${version}`)
 
     version = (await octokit.repos.getLatestRelease({
       owner: 'nodejs',

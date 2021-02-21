@@ -6,6 +6,7 @@
   "dependencies": {
     "@actions/core": "latest",
     "@actions/github": "latest",
-    "@actions/setup-node": "github:actions/setup-node#main"
+    "@actions/setup-node": "github:actions/setup-node#main",
+    "semver": "latest"
   }
 }
