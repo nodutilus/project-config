@@ -8,8 +8,8 @@ async function run() {
   if (version) {
     core.info(`manually input node-version: ${version}`)
   } else {
-    const octokit = github.getOctokit(core.getInput('token'))
-    const releases = (await octokit.graphql(`{
+    const { graphql } = github.getOctokit(core.getInput('token'))
+    const releases = (await graphql(`{
       repository(owner: "nodejs", name: "node") {
         releases(first: 100, orderBy: {  field: CREATED_AT, direction: DESC }) {
           nodes { tagName }
@@ -20,14 +20,6 @@ async function run() {
     version = releases.reduce((latest, item) => {
       return semver.gt(latest, item.tagName) ? latest : item.tagName
     }, '0.0.0')
-
-    core.info(JSON.stringify(releases))
-    core.info(`latest version: ${version}`)
-
-    version = (await octokit.repos.getLatestRelease({
-      owner: 'nodejs',
-      repo: 'node'
-    })).data.tag_name
 
     core.info(`resolved latest node-version: ${JSON.stringify(version)}`)
     process.env['INPUT_NODE-VERSION'] = version
