@@ -15,7 +15,12 @@ async function run() {
           nodes { tagName }
         }
       }
-    }`)).repository.releases.nodes;
+    }`))
+      .repository.releases.nodes
+      .reduce((items, item) => {
+        items.push(item)
+        return items
+      }, []);
 
     core.info(JSON.stringify(releases))
 
