@@ -19,7 +19,7 @@ async function run() {
 
     version = releases.reduce((latest, item) => {
       return semver.gt(latest, item.tagName) ? latest : item.tagName
-    }, '0')
+    }, '0.0.0')
 
     core.info(JSON.stringify(releases))
     core.info(`latest version: ${version}`)
