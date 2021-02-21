@@ -13,11 +13,6 @@ async function run() {
       {
         repository(owner: "nodejs", name: "node") {
           releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
-            edges {
-              node {
-                tagName
-              }
-            }
             nodes {
               tagName
             }
