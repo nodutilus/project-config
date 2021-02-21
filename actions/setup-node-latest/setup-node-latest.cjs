@@ -11,7 +11,7 @@ async function run() {
     const octokit = github.getOctokit(core.getInput('token'))
     const releases = (await octokit.graphql(`{
       repository(owner: "nodejs", name: "node") {
-        releases(first: 30, orderBy: {  field: CREATED_AT, direction: DESC }) {
+        releases(first: 100, orderBy: {  field: CREATED_AT, direction: DESC }) {
           nodes { tagName }
         }
       }
