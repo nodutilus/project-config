@@ -22,7 +22,12 @@ async function run() {
             nodes {
               tagName
             }
-            pageInfo
+            pageInfo {
+              endCursor
+              hasNextPage
+              hasPreviousPage
+              startCursor
+            }
             totalCount
           }
         }
