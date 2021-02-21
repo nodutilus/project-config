@@ -12,8 +12,12 @@ async function run() {
     const result = await octokit.graphql(`
       {
         repository(owner: "nodejs", name: "node") {
-          release(last: 3) {
-            tagName
+          releases(last: 30) {
+            edges {
+              node {
+                tagName
+              }
+            }
           }
         }
       }
