@@ -18,3 +18,12 @@ jobs:
       - uses: nodutilus/project-config/actions/setup-npm@init-config
       - uses: nodutilus/project-config/actions/eslint@init-config
       - uses: nodutilus/project-config/actions/eslintcc@init-config
+
+  coverage:
+    name: Check Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@init-config
+      - uses: nodutilus/project-config/actions/setup-npm@init-config
+      - uses: nodutilus/project-config/actions/nyc-npm@init-config

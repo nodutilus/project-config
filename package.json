@@ -7,7 +7,8 @@
   "type": "module",
   "exports": {
     "./eslint": "./eslint/node-latest.cjs",
-    "./eslint/node-base": "./eslint/node-base.cjs"
+    "./eslint/node-base": "./eslint/node-base.cjs",
+    "./nyc": "./nyc/nyc.config.cjs"
   },
   "engines": {
     "node": ">=15"
@@ -21,6 +22,10 @@
     "eslint-plugin-import": "latest",
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
-    "eslintcc": "latest"
+    "eslintcc": "latest",
+    "c8": "latest"
+  },
+  "scripts": {
+    "test": "node test"
   }
 }

@@ -1,0 +1,10 @@
+name: Run Coverage
+description: Run coverage with native V8 code-coverage <https://www.npmjs.com/package/c8>
+
+runs:
+  using: composite
+  steps:
+    - run: echo npx c8 --check-coverage --all --lines 100 --functions 100 --branches 100 --statements 100 npm test
+      shell: bash
+    - run: npx npx c8 --check-coverage --all --lines 100 --functions 100 --branches 100 --statements 100 npm test
+      shell: bash

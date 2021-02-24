@@ -1,0 +1,3 @@
+{
+  "extends": "./nyc/nyc.config.cjs"
+}
