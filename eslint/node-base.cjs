@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'standard'],
+  extends: ['eslint:recommended', 'standard', './jsdoc.cjs'],
   rules: {
     'camelcase': 'warn', //                        https://eslint.org/docs/rules/camelcase
     'quote-props': ['warn', //                     https://eslint.org/docs/rules/quote-props
