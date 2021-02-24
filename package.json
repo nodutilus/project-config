@@ -26,6 +26,8 @@
     "c8": "latest"
   },
   "scripts": {
-    "test": "node test"
+    "pre-test": "node test",
+    "test": "node test",
+    "post-test": "node test"
   }
 }

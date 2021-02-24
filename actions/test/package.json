@@ -1,0 +1,9 @@
+{
+  "description": "Run tests in Node.js environment",
+  "repository": "github:nodutilus/eslint-config",
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "latest"
+  }
+}

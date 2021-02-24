@@ -1,0 +1,8 @@
+name: "Run tests in Node.js environment"
+description: "Run tests in Node.js environment, using `npm run` with `test`, `pre-test`, `post-test` scripts"
+author: IgorNovozhilov
+
+runs:
+  using: "node12"
+  pre: "setup-own-dependencies.cjs"
+  main: "test.cjs"
