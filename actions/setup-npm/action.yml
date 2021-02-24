@@ -1,8 +1,8 @@
-name: "Setup NPM environment for Node.js"
-description: "Setup a environment, install dependencies, runs builds for Node.js projects"
+name: Setup NPM environment for Node.js
+description: Setup a environment, install dependencies, runs builds for Node.js projects
 author: IgorNovozhilov
 
 runs:
-  using: "node12"
-  pre: "setup-own-dependencies.cjs"
-  main: "setup-npm.cjs"
+  using: node12
+  pre: setup-own-dependencies.cjs
+  main: setup-npm.cjs

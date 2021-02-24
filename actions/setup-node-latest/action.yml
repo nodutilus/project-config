@@ -1,4 +1,4 @@
-name: "Setup Node.js environment <extended>"
+name: Setup Node.js environment <extended>
 description: Setup a latest Node.js environment, dependencies.
   Extends <https://github.com/actions/setup-node>
 author: IgorNovozhilov
@@ -31,6 +31,6 @@ inputs:
     default: ${{ github.token }}
 
 runs:
-  using: "node12"
-  pre: "setup-own-dependencies.cjs"
-  main: "setup-node-latest.cjs"
+  using: node12
+  pre: setup-own-dependencies.cjs
+  main: setup-node-latest.cjs

@@ -14,7 +14,9 @@ if ('pre-test' in scripts) {
   })
 }
 
-command = 'test' in scripts ? 'npm run test' : 'node test'
+command = 'npx c8 --check-coverage --all ' +
+  '--lines 100 --functions 100 --branches 100 --statements 100 '
+command += 'test' in scripts ? 'npm run test' : 'node test'
 core.info(command)
 execSync(command, {
   encoding: 'utf-8',

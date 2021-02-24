@@ -1,0 +1,9 @@
+{
+  "description": "Run coverage with native V8 code-coverage <https://www.npmjs.com/package/c8>",
+  "repository": "github:nodutilus/eslint-config",
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "latest"
+  }
+}
