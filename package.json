@@ -7,7 +7,9 @@
   "type": "module",
   "exports": {
     "./eslint": "./eslint/node-latest.cjs",
+    "./eslint/node": "./eslint/node.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs",
+    "./eslint/node-latest": "./eslint/node-latest.cjs",
     "./nyc": "./nyc/nyc.config.cjs"
   },
   "engines": {
