@@ -10,7 +10,7 @@
     "./eslint/node": "./eslint/node.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs",
     "./eslint/node-latest": "./eslint/node-latest.cjs",
-    "./nyc": "./nyc/nyc.config.cjs"
+    "./nyc": "./.nycrc.json"
   },
   "bin": {
     "nodutilus": "./cli.js"
