@@ -12,6 +12,7 @@
     "./eslint/node-latest": "./eslint/node-latest.cjs",
     "./nyc": "./nyc/nyc.config.cjs"
   },
+  "bin": "./cli.js",
   "engines": {
     "node": ">=15"
   },
