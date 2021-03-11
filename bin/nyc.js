@@ -2,7 +2,7 @@ import { execSync } from 'child_process'
 import { readFileSync } from 'fs'
 
 const scripts = JSON.parse(readFileSync('./package.json', 'utf-8')).scripts || {}
-let command
+let command, error
 
 if ('pre-test' in scripts) {
   command = 'npm run pre-test'
@@ -16,10 +16,14 @@ if ('pre-test' in scripts) {
 command = 'npx c8 --check-coverage '
 command += 'test' in scripts ? 'npm run test' : 'node test'
 console.log(command)
-execSync(command, {
-  encoding: 'utf-8',
-  stdio: ['inherit', 'inherit', 'inherit']
-})
+try {
+  execSync(command, {
+    encoding: 'utf-8',
+    stdio: ['inherit', 'inherit', 'inherit']
+  })
+} catch (err) {
+  error = err
+}
 
 if ('post-test' in scripts) {
   command = 'npm run post-test'
@@ -28,4 +32,8 @@ if ('post-test' in scripts) {
     encoding: 'utf-8',
     stdio: ['inherit', 'inherit', 'inherit']
   })
+}
+
+if (error) {
+  throw error
 }

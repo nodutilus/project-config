@@ -32,8 +32,8 @@
     "c8": "latest"
   },
   "scripts": {
-    "pre-test": "node test",
+    "pre-test": "node test/pre-test",
     "test": "node test",
-    "post-test": "node test"
+    "post-test": "node test/post-test"
   }
 }
