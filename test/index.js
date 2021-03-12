@@ -1,13 +1,13 @@
 import { execSync } from 'child_process'
 
-execSync('node ../../../cli nyc', {
-  cwd: './test/nyc/sctpkg',
+execSync('node ../../../cli c8', {
+  cwd: './test/c8/sctpkg',
   encoding: 'utf-8',
   stdio: ['ignore', 'ignore', 'ignore']
 })
 
 import('./eslint/index.js')
-import('./nyc/index.js')
+import('./c8/index.js')
 
 execSync('node cli', {
   encoding: 'utf-8',
@@ -34,8 +34,8 @@ execSync('node cli eslintcc', {
 if (!process.env.RUN_IN_TEST) {
   process.env.RUN_IN_TEST = 'TRUE'
   try {
-    console.log('node cli nyc')
-    execSync('node cli nyc', {
+    console.log('node cli c8')
+    execSync('node cli c8', {
       stdio: ['ignore', 'ignore', 'ignore']
     })
   } catch (error) { }
