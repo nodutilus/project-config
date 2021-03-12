@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./node-base.cjs'],
+  extends: ['./node.cjs'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     sourceType: 'module',
