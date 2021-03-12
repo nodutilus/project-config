@@ -8,6 +8,7 @@
   "exports": {
     "./eslint": "./eslint/node-latest.cjs",
     "./eslint/node": "./eslint/node.cjs",
+    "./eslint/browser": "./eslint/browser.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs",
     "./eslint/node-latest": "./eslint/node-latest.cjs",
     "./nyc": "./.nycrc.json"

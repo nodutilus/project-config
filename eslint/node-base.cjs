@@ -1,5 +1,9 @@
 module.exports = {
   extends: ['eslint:recommended', 'standard'],
+  env: {
+    browser: false,
+    node: true
+  },
   rules: {
     'camelcase': 'warn', //                        https://eslint.org/docs/rules/camelcase
     'quote-props': ['warn', //                     https://eslint.org/docs/rules/quote-props
