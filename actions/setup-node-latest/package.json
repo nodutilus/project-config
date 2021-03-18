@@ -1,0 +1,12 @@
+{
+  "description": "Setup Node.js environment <extended>",
+  "repository": "github:nodutilus/eslint-config",
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "latest",
+    "@actions/github": "latest",
+    "@actions/setup-node": "github:actions/setup-node#main",
+    "semver": "latest"
+  }
+}

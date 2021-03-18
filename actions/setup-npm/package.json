@@ -1,0 +1,9 @@
+{
+  "description": "Setup NPM environment for Node.js",
+  "repository": "github:nodutilus/eslint-config",
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "latest"
+  }
+}

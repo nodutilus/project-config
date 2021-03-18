@@ -1,0 +1,7 @@
+name: Run Coverage
+description: Run coverage with native V8 code-coverage <https://www.npmjs.com/package/c8>
+
+runs:
+  using: node12
+  pre: setup-own-dependencies.cjs
+  main: coverage.cjs
