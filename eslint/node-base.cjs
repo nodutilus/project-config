@@ -28,6 +28,10 @@ module.exports = {
       },
       { allowSingleLineBlocks: true }
     ],
+    'generator-star-spacing': ['warn', { //        https://eslint.org/docs/rules/generator-star-spacing
+      before: false,
+      after: true
+    }],
     'object-shorthand': 'error', //                https://eslint.org/docs/rules/object-shorthand
     'prefer-destructuring': 'error', //            https://eslint.org/docs/rules/prefer-destructuring
     'no-var': 'error', //                          https://eslint.org/docs/rules/no-var
