@@ -5,7 +5,7 @@ import { walk, readJSON } from '@nodutilus/fs'
 console.log('Searching package.json...');
 
 (async () => {
-  for await (const [path] of walk('.', { include: 'package.json', exclude: 'node_modules/' })) {
+  for await (const [path] of walk('.', { include: 'package.json', exclude: '/node_modules/' })) {
     const pkg = await readJSON(path)
 
     console.log(`Checking '${path}'`)
