@@ -1,0 +1,10 @@
+{
+  "description": "Publishes all NPM packages found in the repository, if their version has incremented",
+  "repository": "github:nodutilus/project-config",
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "latest",
+    "@nodutilus/fs": "latest"
+  }
+}

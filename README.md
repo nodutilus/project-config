@@ -2,7 +2,7 @@
 
 Node.js utilities - projects shared configuration
 
-## [![npm](https://img.shields.io/npm/v/@nodutilus/eslint-config)](https://www.npmjs.com/package/@nodutilus/eslint-config) [![Checks & Tests](https://github.com/nodutilus/project-config/actions/workflows/main.yml/badge.svg)](https://github.com/nodutilus/project-config/actions/workflows/main.yml) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/eslint-config/eslint-config-standard)](https://www.npmjs.com/package/eslint-config-standard) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/eslint-config/eslint-plugin-jsdoc)](https://www.npmjs.com/package/eslint-plugin-jsdoc)
+## [![npm](https://img.shields.io/npm/v/@nodutilus/project-config)](https://www.npmjs.com/package/@nodutilus/project-config) [![Checks & Tests](https://github.com/nodutilus/project-config/actions/workflows/main.yml/badge.svg)](https://github.com/nodutilus/project-config/actions/workflows/main.yml) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/project-config-standard)](https://www.npmjs.com/package/project-config-standard) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslint-plugin-jsdoc)](https://www.npmjs.com/package/eslint-plugin-jsdoc)
 
 ESLint shareable configuration for [github.com/nodutilus](https://github.com/nodutilus)
 
@@ -19,17 +19,17 @@ ESLint shareable configuration for [github.com/nodutilus](https://github.com/nod
 
 Применение правил:
 
--   `"extends": "@nodutilus"`, `"extends": "@nodutilus/eslint-config"` - Все сразу
+-   `"extends": "@nodutilus"`, `"extends": "@nodutilus/project-config"` - Все сразу
 
 ### Пример настройки проекта
 
-`npm i @nodutilus/eslint-config --save-dev`
+`npm i @nodutilus/project-config --save-dev`
 
 `.eslintrc.json`:
 
 ```json
 {
-  "extends": "@nodutilus/eslint-config"
+  "extends": "@nodutilus/project-config"
 }
 ```
 

@@ -2,7 +2,7 @@
   "name": "@nodutilus/project-config",
   "version": "1.0.1",
   "description": "Node.js utilities - projects shared configuration",
-  "repository": "github:nodutilus/eslint-config",
+  "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
   "homepage": "https://github.com/nodutilus",
   "type": "module",
