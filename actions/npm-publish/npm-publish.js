@@ -15,7 +15,7 @@ console.log('Searching package.json...');
       continue
     }
 
-    execSync(`npm info ${pkg.name}`, {
+    execSync(`npm info ${pkg.name} version`, {
       encoding: 'utf-8',
       stdio: ['inherit', 'inherit', 'inherit']
     })
