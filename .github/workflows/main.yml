@@ -43,7 +43,7 @@ jobs:
   build-and-publish:
     name: Build & Publish
     needs: [checks, tests, coverage]
-    if: github.event_name == 'push'
+    # if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
