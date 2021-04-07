@@ -1,0 +1,8 @@
+/.github
+/.vscode
+/actions
+/coverage
+/test
+/.eslintrc.json
+/.nycrc.json
+/*.tgz
