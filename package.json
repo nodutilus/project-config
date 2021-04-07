@@ -12,7 +12,7 @@
     "./eslint/browser": "./eslint/browser.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs",
     "./eslint/node-latest": "./eslint/node-latest.cjs",
-    "./nyc": "./.nycrc.json"
+    "./nyc": "./nyc.json"
   },
   "bin": {
     "nodutilus": "./cli.js"
