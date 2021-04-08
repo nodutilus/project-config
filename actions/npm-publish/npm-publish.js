@@ -1,4 +1,3 @@
-/* c8 ignore start */
 import { execSync } from 'child_process'
 import { walk, readJSON } from '@nodutilus/fs'
 
@@ -36,4 +35,3 @@ console.log('Searching package.json...');
   console.error(error)
   process.exit(1)
 })
-/* c8 ignore stop */
