@@ -6,6 +6,7 @@
   "statements": 100,
   "exclude": [
     "actions/**",
+    "eslint-config/**",
     "test/pre-test.js"
   ]
 }
