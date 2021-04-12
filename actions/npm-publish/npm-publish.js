@@ -19,7 +19,7 @@ console.log('Searching package.json...');
       curVersion = execSync(`npm info ${pkg.name} version`, {
         encoding: 'utf-8',
         stdio: ['ignore', 'pipe', 'pipe']
-      })
+      }).trim()
     } catch (error) {
       if (!(/npm ERR! code E404/).test(error.stderr)) {
         throw error
