@@ -21,11 +21,11 @@ Node.js utilities - projects shared configuration
 
 ### Применение настроек
 
-`.eslintrc.cjs`:
+`.eslintrc.json`:
 
-```js
-module.exports = {
-  extends: require.resolve('@nodutilus/project-config/eslint')
+```json
+{
+  "extends": "@nodutilus"
 }
 ```
 
