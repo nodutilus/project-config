@@ -24,6 +24,7 @@
     "@babel/core": "latest",
     "@babel/eslint-parser": "latest",
     "@babel/plugin-proposal-class-properties": "latest",
+    "@nodutilus/eslint-config": "latest",
     "c8": "latest",
     "eslint": "latest",
     "eslint-config-standard": "latest",
