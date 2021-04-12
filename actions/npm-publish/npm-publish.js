@@ -29,6 +29,11 @@ console.log('Searching package.json...');
       }
     }
 
+    if (pkg.version === curVersion) {
+      console.log(` * 📦  ${pkg.name}@${curVersion} - already up-to-date`)
+      continue
+    }
+
     console.log(`curVersion: ${curVersion}`)
   }
 })().catch(error => {
