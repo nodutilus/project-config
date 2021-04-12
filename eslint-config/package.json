@@ -1,6 +1,6 @@
 {
   "name": "@nodutilus/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alias for @nodutilus/project-config/eslint",
   "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
