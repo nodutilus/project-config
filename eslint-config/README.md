@@ -4,7 +4,7 @@ ESLint shareable configuration
 
 **Alias for [@nodutilus/project-config/eslint][npm]**
 
-** `!WARNING!` Don't use without @nodutilus/project-config **
+**`!WARNING!` Don't use without @nodutilus/project-config**
 
 Используется для поддержки простого подключения модуля через `extends` по правилам eslint,
 т.к. для `scoped` пакетов обязательно название модуля `eslint-config`.
