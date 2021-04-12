@@ -12,7 +12,7 @@ ESLint shareable configuration for [github.com/nodutilus](https://github.com/nod
 ### Правила по умолчанию
 
 -   [eslint:recommended](https://eslint.org/docs/rules/)
--   [StandardJS](https://www.npmjs.com/package/eslint-config-standard)
+-   [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslint-config-standard)](https://www.npmjs.com/package/eslint-config-standard) [StandardJS](https://www.npmjs.com/package/eslint-config-standard)
     ([+ дополнение](https://github.com/nodutilus/project-config/blob/master/node-base.cjs))
 -   [JSDoc:recommended](https://www.npmjs.com/package/eslint-plugin-jsdoc)
     ([измененный](https://github.com/nodutilus/project-config/blob/master/jsdoc.cjs))
