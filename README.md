@@ -1,8 +1,8 @@
-# project-config
+# nodutilus project config [![npm][npmbadge]][npm] [![Checks & Tests][badge]][actions]
 
 Node.js utilities - projects shared configuration
 
-## [![npm](https://img.shields.io/npm/v/@nodutilus/project-config)](https://www.npmjs.com/package/@nodutilus/project-config) [![Checks & Tests](https://github.com/nodutilus/project-config/actions/workflows/main.yml/badge.svg)](https://github.com/nodutilus/project-config/actions/workflows/main.yml) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/project-config-standard)](https://www.npmjs.com/package/project-config-standard) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslint-plugin-jsdoc)](https://www.npmjs.com/package/eslint-plugin-jsdoc)
+## [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslint-config-standard)](https://www.npmjs.com/package/eslint-config-standard) [![npm](https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslint-plugin-jsdoc)](https://www.npmjs.com/package/eslint-plugin-jsdoc)
 
 ESLint shareable configuration for [github.com/nodutilus](https://github.com/nodutilus)
 
@@ -36,7 +36,6 @@ ESLint shareable configuration for [github.com/nodutilus](https://github.com/nod
 -   [nodutilus/package.json](https://github.com/nodutilus/nodutilus/blob/master/package.json)
 -   [nodutilus/.eslintrc.json](https://github.com/nodutilus/nodutilus/blob/master/.eslintrc.json)
 
-
 ### Оценка сложности кода
 
 Для оценки используется модуль: [eslintcc](https://www.npmjs.com/package/eslintcc).
@@ -47,3 +46,11 @@ ESLint shareable configuration for [github.com/nodutilus](https://github.com/nod
 ### Пример настройки проекта
 
 -   [nodutilus/.github/workflows/checks-and-tests.yml](https://github.com/nodutilus/nodutilus/blob/master/.github/workflows/checks-and-tests.yml)
+
+[npmbadge]: https://img.shields.io/npm/v/@nodutilus/project-config
+
+[npm]: https://www.npmjs.com/package/@nodutilus/project-config
+
+[badge]: https://github.com/nodutilus/project-config/actions/workflows/main.yml/badge.svg?branch=main&event=push
+
+[actions]: https://github.com/nodutilus/project-config/actions
