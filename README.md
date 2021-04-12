@@ -19,7 +19,7 @@ Node.js utilities - projects shared configuration
 -   [JSDoc:recommended][npm_jsdoc]
     ([+ дополнение](https://github.com/nodutilus/project-config/blob/master/jsdoc.cjs))
 
-### Применение
+### Применение настроек
 
 `.eslintrc.cjs`:
 
@@ -29,6 +29,10 @@ module.exports = {
 }
 ```
 
+### Локальное использование
+
+    $ npx nodutilus eslint
+
 ## ESLintCC [![][badge_eslintcc]][npm_eslintcc]
 
 Для оценки сложности кода используется модуль: [eslintcc][npm_eslintcc].
@@ -37,6 +41,10 @@ module.exports = {
   и [критериев оценки](https://www.npmjs.com/package/eslintcc#complexity-ranks).
 
 Для работы модуль использует настройки ESLint текущего проекта.
+
+### Локальное использование
+
+    $ npx nodutilus eslintсс
 
 ## Пример настройки проекта
 
