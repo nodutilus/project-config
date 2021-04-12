@@ -37,5 +37,8 @@
     "pre-test": "node test/pre-test",
     "test": "node test",
     "post-test": "node test/post-test"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
