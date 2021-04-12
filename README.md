@@ -1,8 +1,12 @@
-# nodutilus project config [![npmbadge]][npm] [![badge]][actions]
+# nodutilus project config [![][npmbadge]][npm] [![][badge]][actions]
 
 Node.js utilities - projects shared configuration
 
-## ESLint config [![badge_eslint]][npm_eslint] [![badge_standard]][npm_standard] [![badge_jsdoc]][npm_jsdoc]
+Установка:
+
+`npm i @nodutilus/project-config --save-dev`
+
+## ESLint config [![][badge_eslint]][npm_eslint] [![][badge_standard]][npm_standard] [![][badge_jsdoc]][npm_jsdoc]
 
 Конфиг для статического анализа модулей в формате [ESM](https://nodejs.org/api/esm.html)
 при помощи утилиты [eslint][npm_eslint].
@@ -15,33 +19,26 @@ Node.js utilities - projects shared configuration
 -   [JSDoc:recommended][npm_jsdoc]
     ([+ дополнение](https://github.com/nodutilus/project-config/blob/master/jsdoc.cjs))
 
-Применение правил:
+### Применение
 
--   `"extends": "@nodutilus"`, `"extends": "@nodutilus/project-config"` - Все сразу
+`.eslintrc.cjs`:
 
-### Пример настройки проекта
-
-`npm i @nodutilus/project-config --save-dev`
-
-`.eslintrc.json`:
-
-```json
-{
-  "extends": "@nodutilus/project-config"
+```js
+module.exports = {
+  extends: require.resolve('@nodutilus/project-config/eslint')
 }
 ```
 
--   [nodutilus/package.json](https://github.com/nodutilus/nodutilus/blob/master/package.json)
--   [nodutilus/.eslintrc.json](https://github.com/nodutilus/nodutilus/blob/master/.eslintrc.json)
+## ESLintCC [![][badge_eslintcc]][npm_eslintcc]
 
-### Оценка сложности кода
-
-Для оценки используется модуль: [eslintcc](https://www.npmjs.com/package/eslintcc).
+Для оценки сложности кода используется модуль: [eslintcc][npm_eslintcc].
 На странице модуля есть описание
   [настроек](https://www.npmjs.com/package/eslintcc#configuration)
   и [критериев оценки](https://www.npmjs.com/package/eslintcc#complexity-ranks).
 
-### Пример настройки проекта
+Для работы модуль использует настройки ESLint текущего проекта.
+
+## Пример настройки проекта
 
 -   [nodutilus/.github/workflows/checks-and-tests.yml](https://github.com/nodutilus/nodutilus/blob/master/.github/workflows/checks-and-tests.yml)
 
@@ -64,3 +61,7 @@ Node.js utilities - projects shared configuration
 [badge_jsdoc]: https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslint-plugin-jsdoc
 
 [npm_jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
+
+[badge_eslintcc]: https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslintcc
+
+[npm_eslintcc]: https://www.npmjs.com/package/eslintcc
