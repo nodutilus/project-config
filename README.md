@@ -46,6 +46,25 @@ Node.js utilities - projects shared configuration
 
     $ npx nodutilus eslintсс
 
+## c8 - code-coverage [![][badge_c8]][npm_c8]
+
+Покрытие кода с использованием встроенных функций Node.js.
+Для настройки используется конфигурация [nyc][npm_nyc]
+
+### Применение настроек
+
+`.nycrc.json`:
+
+```json
+{
+  "extends": "@nodutilus/project-config/nyc"
+}
+```
+
+### Локальное использование
+
+    $ npx nodutilus c8
+
 ## Пример настройки проекта
 
 -   [nodutilus/.github/workflows/checks-and-tests.yml](https://github.com/nodutilus/nodutilus/blob/master/.github/workflows/checks-and-tests.yml)
@@ -73,3 +92,9 @@ Node.js utilities - projects shared configuration
 [badge_eslintcc]: https://img.shields.io/npm/dependency-version/@nodutilus/project-config/eslintcc
 
 [npm_eslintcc]: https://www.npmjs.com/package/eslintcc
+
+[badge_c8]: https://img.shields.io/npm/dependency-version/@nodutilus/project-config/c8
+
+[npm_c8]: https://www.npmjs.com/package/c8
+
+[npm_nyc]: https://www.npmjs.com/package/nyc

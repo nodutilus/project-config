@@ -1,3 +1,4 @@
+import { dirname } from 'path'
 import { execSync } from 'child_process'
 import { walk, readJSON } from '@nodutilus/fs'
 
@@ -34,7 +35,11 @@ console.log('Searching package.json...');
       continue
     }
 
-    console.log(`curVersion: ${curVersion}`)
+    execSync('npm publish', {
+      cwd: dirname(path),
+      encoding: 'utf-8',
+      stdio: ['inherit', 'inherit', 'inherit']
+    })
   }
 })().catch(error => {
   console.error(error)
