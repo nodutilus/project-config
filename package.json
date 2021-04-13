@@ -1,6 +1,6 @@
 {
   "name": "@nodutilus/project-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js utilities - projects shared configuration",
   "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
