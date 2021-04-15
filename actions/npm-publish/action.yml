@@ -5,8 +5,7 @@ author: IgorNovozhilov
 inputs:
   token:
     description: NPM access token for publishing a package
-    required: false
-    default: ${{ secrets.NPM_TOKEN }}
+    required: true
 
 runs:
   using: node12

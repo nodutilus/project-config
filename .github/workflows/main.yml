@@ -50,3 +50,5 @@ jobs:
       - uses: nodutilus/project-config/actions/setup-node-latest@main
       - uses: nodutilus/project-config/actions/setup-npm@main
       - uses: nodutilus/project-config/actions/npm-publish@v1.0.1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
