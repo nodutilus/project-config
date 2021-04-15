@@ -2,6 +2,12 @@ name: Publish NPM packages
 description: Publishes all NPM packages found in the repository, if their version has incremented
 author: IgorNovozhilov
 
+inputs:
+  token:
+    description: NPM access token for publishing a package
+    required: false
+    default: ${{ secrets.NPM_TOKEN }}
+
 runs:
   using: node12
   pre: setup-own-dependencies.cjs

@@ -35,6 +35,12 @@ console.log('Searching package.json...');
       continue
     }
 
+    /* eslint-disable-next-line no-template-curly-in-string */
+    execSync('npm set //registry.npmjs.org/:_authToken=${NPM_TOKEN}', {
+      cwd: dirname(path),
+      encoding: 'utf-8',
+      stdio: ['inherit', 'inherit', 'inherit']
+    })
     execSync('npm publish', {
       cwd: dirname(path),
       encoding: 'utf-8',
