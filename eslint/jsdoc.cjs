@@ -8,6 +8,9 @@ module.exports = {
         ClassDeclaration: true,
         MethodDefinition: true
       }
+    }],
+    'jsdoc/no-undefined-types': ['warn', { // https://www.npmjs.com/package/eslint-plugin-jsdoc#no-undefined-types
+      definedTypes: ['Iterator']
     }]
   },
   settings: {

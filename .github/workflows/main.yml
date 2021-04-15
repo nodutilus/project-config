@@ -39,3 +39,16 @@ jobs:
       - uses: nodutilus/project-config/actions/setup-node-latest@main
       - uses: nodutilus/project-config/actions/setup-npm@main
       - uses: nodutilus/project-config/actions/c8@main
+
+  build-and-publish:
+    name: Build & Publish
+    needs: [checks, tests, coverage]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-npm@main
+      - uses: nodutilus/project-config/actions/npm-publish@main
+        with:
+          token: ${{ secrets.NPM_TOKEN }}

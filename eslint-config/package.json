@@ -1,0 +1,16 @@
+{
+  "name": "@nodutilus/eslint-config",
+  "version": "1.0.2",
+  "description": "Alias for @nodutilus/project-config/eslint",
+  "repository": "github:nodutilus/project-config",
+  "license": "Unlicense",
+  "homepage": "https://github.com/nodutilus",
+  "type": "commonjs",
+  "main": "node-latest.js",
+  "engines": {
+    "node": ">=15"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+/.github
+/.vscode
+/actions
+/coverage
+/eslint-config
+/test
+/.eslintrc.json
+/.nycrc.json
+/*.tgz
