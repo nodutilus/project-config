@@ -32,7 +32,8 @@
     "eslint-plugin-jsdoc": "latest",
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
-    "eslintcc": "latest"
+    "eslintcc": "latest",
+    "typescript": "latest"
   },
   "scripts": {
     "pre-test": "node test/pre-test",

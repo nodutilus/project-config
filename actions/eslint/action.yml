@@ -1,5 +1,5 @@
 name: Run ESLint
-description: Runing ESLint checks
+description: Running ESLint checks
 
 runs:
   using: composite

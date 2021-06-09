@@ -1,0 +1,10 @@
+name: Run ESLint
+description: Running JavaScript types checks via TypeScript tools
+
+runs:
+  using: composite
+  steps:
+    - run: echo npx tsc --allowJs --checkJs --noEmit --lib ESNext --project .
+      shell: bash
+    - run: npx tsc --allowJs --checkJs --noEmit --lib ESNext --project .
+      shell: bash
