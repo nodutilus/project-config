@@ -37,6 +37,9 @@
     "typescript": "latest",
     "@types/node": "latest"
   },
+  "devDependencies": {
+    "@actions/core": "latest"
+  },
   "scripts": {
     "pre-test": "node test/pre-test",
     "test": "node test",

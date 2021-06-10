@@ -5,6 +5,7 @@
     "noEmit": true,
     "target": "ESNext",
     "module": "ESNext",
+    "moduleResolution": "node",
     "lib": [
       "ESNext",
       "DOM"
