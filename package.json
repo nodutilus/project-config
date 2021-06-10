@@ -38,7 +38,8 @@
     "@types/node": "latest"
   },
   "devDependencies": {
-    "@actions/core": "latest"
+    "@actions/core": "latest",
+    "@actions/github": "latest"
   },
   "scripts": {
     "pre-test": "node test/pre-test",
