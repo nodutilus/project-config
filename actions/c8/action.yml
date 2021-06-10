@@ -3,5 +3,5 @@ description: Run coverage with native V8 code-coverage <https://www.npmjs.com/pa
 
 runs:
   using: node12
-  pre: setup-own-dependencies.mjs
-  main: coverage.mjs
+  pre: setup-own-dependencies.cjs
+  main: coverage.cjs
