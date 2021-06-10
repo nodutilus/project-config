@@ -4,5 +4,4 @@ author: IgorNovozhilov
 
 runs:
   using: node12
-  pre: setup-own-dependencies.cjs
   main: test.cjs
