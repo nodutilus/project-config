@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/actions/setup-node-latest@main
-      - uses: nodutilus/project-config/actions/setup-npm@main
-      - uses: nodutilus/project-config/actions/eslint@main
-      - uses: nodutilus/project-config/actions/eslintcc@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@dev/ts-check
+      - uses: nodutilus/project-config/actions/setup-npm@dev/ts-check
+      - uses: nodutilus/project-config/actions/eslint@dev/ts-check
+      - uses: nodutilus/project-config/actions/eslintcc@dev/ts-check
       - uses: nodutilus/project-config/actions/ts-check@dev/ts-check
 
   tests:
@@ -28,18 +28,18 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/actions/setup-node-latest@main
-      - uses: nodutilus/project-config/actions/setup-npm@main
-      - uses: nodutilus/project-config/actions/test@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@dev/ts-check
+      - uses: nodutilus/project-config/actions/setup-npm@dev/ts-check
+      - uses: nodutilus/project-config/actions/test@dev/ts-check
 
   coverage:
     name: Check Coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/actions/setup-node-latest@main
-      - uses: nodutilus/project-config/actions/setup-npm@main
-      - uses: nodutilus/project-config/actions/c8@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@dev/ts-check
+      - uses: nodutilus/project-config/actions/setup-npm@dev/ts-check
+      - uses: nodutilus/project-config/actions/c8@dev/ts-check
 
   build-and-publish:
     name: Build & Publish
@@ -48,8 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/actions/setup-node-latest@main
-      - uses: nodutilus/project-config/actions/setup-npm@main
-      - uses: nodutilus/project-config/actions/npm-publish@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@dev/ts-check
+      - uses: nodutilus/project-config/actions/setup-npm@dev/ts-check
+      - uses: nodutilus/project-config/actions/npm-publish@dev/ts-check
         with:
           token: ${{ secrets.NPM_TOKEN }}
