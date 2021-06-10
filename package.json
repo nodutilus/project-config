@@ -12,7 +12,8 @@
     "./eslint/browser": "./eslint/browser.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs",
     "./eslint/node-latest": "./eslint/node-latest.cjs",
-    "./nyc": "./nyc.json"
+    "./nyc": "./nyc.json",
+    "./tsconfig": "./package.json"
   },
   "bin": {
     "nodutilus": "./cli.js"
@@ -33,7 +34,8 @@
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
     "eslintcc": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "@types/node": "latest"
   },
   "scripts": {
     "pre-test": "node test/pre-test",
