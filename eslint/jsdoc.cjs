@@ -9,9 +9,8 @@ module.exports = {
         MethodDefinition: true
       }
     }],
-    'jsdoc/no-undefined-types': ['warn', { // https://www.npmjs.com/package/eslint-plugin-jsdoc#no-undefined-types
-      definedTypes: ['Iterator']
-    }]
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-returns-description': 'off'
   },
   settings: {
     jsdoc: {
