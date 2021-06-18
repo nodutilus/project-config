@@ -8,9 +8,7 @@ module.exports = {
         ClassDeclaration: true,
         MethodDefinition: true
       }
-    }],
-    'jsdoc/require-param-description': 'off',
-    'jsdoc/require-returns-description': 'off'
+    }]
   },
   settings: {
     jsdoc: {
