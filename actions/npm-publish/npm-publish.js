@@ -6,6 +6,7 @@ console.log('Searching package.json...');
 
 (async () => {
   for await (const [path] of walk('.', { include: 'package.json', exclude: '/node_modules/' })) {
+    /** @type {{name?: string, version?: string}} */
     const pkg = await readJSON(path)
     let curVersion
 

@@ -38,6 +38,7 @@
     "@types/node": "latest"
   },
   "devDependencies": {
+    "@nodutilus/fs": "latest",
     "@actions/core": "latest",
     "@actions/github": "latest"
   },
