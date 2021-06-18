@@ -4,6 +4,7 @@ module.exports = {
     browser: false,
     node: true
   },
+  ignorePatterns: ['*.ts'],
   rules: {
     'camelcase': 'warn', //                        https://eslint.org/docs/rules/camelcase
     'quote-props': ['warn', //                     https://eslint.org/docs/rules/quote-props
