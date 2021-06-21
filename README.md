@@ -19,7 +19,7 @@ Node.js utilities - projects shared configuration
 -   [JSDoc:recommended][npm_jsdoc]
     ([+ дополнение](https://github.com/nodutilus/project-config/blob/master/jsdoc.cjs))
 
-### Применение настроек
+### Настройки
 
 `.eslintrc.json`:
 
@@ -29,9 +29,21 @@ Node.js utilities - projects shared configuration
 }
 ```
 
-### Локальное использование
+### Использование
+
+#### Локально
 
     $ npx nodutilus eslint
+
+#### GitHub Actions
+
+```yml
+name: Checks
+jobs:
+  checks:
+    steps:
+      - uses: nodutilus/project-config/actions/eslint@main
+```
 
 ## ESLintCC [![][badge_eslintcc]][npm_eslintcc]
 
@@ -42,16 +54,62 @@ Node.js utilities - projects shared configuration
 
 Для работы модуль использует настройки ESLint текущего проекта.
 
-### Локальное использование
+### Использование
+
+#### Локально
 
     $ npx nodutilus eslintсс
+
+#### GitHub Actions
+
+```yml
+name: Checks
+jobs:
+  checks:
+    steps:
+      - uses: nodutilus/project-config/actions/eslintсс@main
+```
+
+## Type Checking JavaScript [![][badge_ts]][npm_ts]
+
+Проверка типов в коде написанном на JavaScript при помощи TypeScript
+
+Подробнее о проверке типов в см. статье:
+[JS Projects Utilizing TypeScript](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html)
+
+### Настройки
+
+`tsconfig.json`:
+
+```json
+{
+  "extends": "@nodutilus/project-config/tsconfig"
+}
+
+```
+
+### Использование
+
+#### Локально
+
+    $ npx nodutilus ts-check
+
+#### GitHub Actions
+
+```yml
+name: Checks
+jobs:
+  checks:
+    steps:
+      - uses: nodutilus/project-config/actions/ts-check@main
+```
 
 ## c8 - code-coverage [![][badge_c8]][npm_c8]
 
 Покрытие кода с использованием встроенных функций Node.js.
 Для настройки используется конфигурация [nyc][npm_nyc]
 
-### Применение настроек
+### Настройки
 
 `.nycrc.json`:
 
@@ -61,9 +119,21 @@ Node.js utilities - projects shared configuration
 }
 ```
 
-### Локальное использование
+### Использование
+
+#### Локально
 
     $ npx nodutilus c8
+
+#### GitHub Actions
+
+```yml
+name: Coverage
+jobs:
+  coverage:
+    steps:
+      - uses: nodutilus/project-config/actions/c8@main
+```
 
 ## Пример настройки проекта
 
@@ -96,5 +166,9 @@ Node.js utilities - projects shared configuration
 [badge_c8]: https://img.shields.io/npm/dependency-version/@nodutilus/project-config/c8
 
 [npm_c8]: https://www.npmjs.com/package/c8
+
+[badge_ts]: https://img.shields.io/npm/dependency-version/@nodutilus/project-config/typescript
+
+[npm_ts]: https://www.npmjs.com/package/typescript
 
 [npm_nyc]: https://www.npmjs.com/package/nyc
