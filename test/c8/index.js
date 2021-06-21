@@ -19,6 +19,7 @@ class X {
 function test() {
   const x = new X()
 
+  // @ts-ignore
   console.log(x, x.a)
 }
 

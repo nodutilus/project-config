@@ -1,5 +1,5 @@
 name: Run ESLintCC
-description: Runing ESLintCC checks
+description: Running ESLintCC checks
 
 runs:
   using: composite

@@ -1,6 +1,6 @@
 {
   "name": "@nodutilus/project-config",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Node.js utilities - projects shared configuration",
   "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
@@ -12,13 +12,14 @@
     "./eslint/browser": "./eslint/browser.cjs",
     "./eslint/node-base": "./eslint/node-base.cjs",
     "./eslint/node-latest": "./eslint/node-latest.cjs",
-    "./nyc": "./nyc.json"
+    "./nyc": "./nyc.json",
+    "./tsconfig": "./package.json"
   },
   "bin": {
     "nodutilus": "./cli.js"
   },
   "engines": {
-    "node": ">=15"
+    "node": ">=16"
   },
   "dependencies": {
     "@babel/core": "latest",
@@ -32,7 +33,14 @@
     "eslint-plugin-jsdoc": "latest",
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
-    "eslintcc": "latest"
+    "eslintcc": "latest",
+    "typescript": "latest",
+    "@types/node": "latest"
+  },
+  "devDependencies": {
+    "@nodutilus/fs": "latest",
+    "@actions/core": "latest",
+    "@actions/github": "latest"
   },
   "scripts": {
     "pre-test": "node test/pre-test",

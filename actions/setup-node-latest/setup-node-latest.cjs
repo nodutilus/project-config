@@ -2,8 +2,10 @@ const core = require('@actions/core')
 const github = require('@actions/github')
 const semver = require('semver')
 
-/** Проверка версии Node.JS через релизы на GitHub,
- *    с последующим запуском действия actions/setup-node с указанием версии */
+/**
+ * Проверка версии Node.JS через релизы на GitHub,
+ *    с последующим запуском действия actions/setup-node с указанием версии
+ */
 async function run() {
   let version = core.getInput('node-version')
 
@@ -28,6 +30,7 @@ async function run() {
   }
 
   core.info('run github:actions/setup-node#main')
+  // @ts-ignore
   require('@actions/setup-node/dist/index.js')
 }
 

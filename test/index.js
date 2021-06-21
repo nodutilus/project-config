@@ -30,6 +30,11 @@ execSync('node cli eslintcc', {
   stdio: ['inherit', 'inherit', 'inherit']
 })
 
+execSync('node cli ts-check', {
+  encoding: 'utf-8',
+  stdio: ['inherit', 'inherit', 'inherit']
+})
+
 
 if (!process.env.RUN_IN_TEST) {
   process.env.RUN_IN_TEST = 'TRUE'
