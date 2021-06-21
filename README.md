@@ -6,7 +6,7 @@ Node.js utilities - projects shared configuration
 
 `npm i @nodutilus/project-config --save-dev`
 
-## ESLint config [![][badge_eslint]][npm_eslint] [![][badge_standard]][npm_standard] [![][badge_jsdoc]][npm_jsdoc]
+## ESLint [![][badge_eslint]][npm_eslint] [![][badge_standard]][npm_standard] [![][badge_jsdoc]][npm_jsdoc]
 
 Конфиг для статического анализа модулей в формате [ESM](https://nodejs.org/api/esm.html)
 при помощи утилиты [eslint][npm_eslint].
@@ -104,7 +104,7 @@ jobs:
       - uses: nodutilus/project-config/actions/ts-check@main
 ```
 
-## c8 - code-coverage [![][badge_c8]][npm_c8]
+## Code coverage with c8 [![][badge_c8]][npm_c8]
 
 Покрытие кода с использованием встроенных функций Node.js.
 Для настройки используется конфигурация [nyc][npm_nyc]
