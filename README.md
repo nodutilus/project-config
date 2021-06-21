@@ -85,7 +85,6 @@ jobs:
 {
   "extends": "@nodutilus/project-config/tsconfig"
 }
-
 ```
 
 ### Использование
@@ -102,6 +101,41 @@ jobs:
   checks:
     steps:
       - uses: nodutilus/project-config/actions/ts-check@main
+```
+
+## Run tests
+
+Для запуска тестов используется команда `node test` или `npm run test` (если настроен скрипт в package.json).
+Так же можно настроить пред- и пост- обработчик запуска тестов скриптами `npm run pre-test` и `npm run post-test`
+
+### Настройки
+
+`package.json`:
+
+```json
+{
+  "scripts": {
+    "pre-test": "node test/pre-test",
+    "test": "node test/index",
+    "post-test": "node test/post-test"
+  }
+}
+```
+
+### Использование
+
+#### Локально
+
+    $ npx nodutilus test
+
+#### GitHub Actions
+
+```yml
+name: Tests
+jobs:
+  tests:
+    steps:
+      - uses: nodutilus/project-config/actions/test@main
 ```
 
 ## Code coverage with c8 [![][badge_c8]][npm_c8]
