@@ -31,7 +31,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@main
-      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@dev/upd-setup-node
       - uses: nodutilus/project-config/actions/setup-npm@main
       - uses: nodutilus/project-config/actions/test@main
 
