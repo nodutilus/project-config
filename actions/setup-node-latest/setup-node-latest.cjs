@@ -31,7 +31,7 @@ async function run() {
 
   core.info('run github:actions/setup-node#main')
   // @ts-ignore
-  require('@actions/setup-node/dist/index.js')
+  require('@actions/setup-node/dist/setup/index.js')
 }
 
 run().catch(error => {
