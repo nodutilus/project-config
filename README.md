@@ -4,7 +4,15 @@ Node.js utilities - projects shared configuration
 
 Установка:
 
-`npm i @nodutilus/project-config --save-dev`
+    $ npm i @nodutilus/project-config --save-dev
+
+Справка:
+
+    $ npx nodutilus help
+
+Запустить все проверки:
+
+    $ npx nodutilus all
 
 ## ESLint [![][badge_eslint]][npm_eslint] [![][badge_standard]][npm_standard] [![][badge_jsdoc]][npm_jsdoc]
 
