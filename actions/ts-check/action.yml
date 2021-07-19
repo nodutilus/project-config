@@ -4,7 +4,7 @@ description: Running JavaScript types checks via TypeScript tools
 runs:
   using: composite
   steps:
-    - run: echo npx tsc --allowJs --checkJs --noEmit --lib ESNext --project .
+    - run: echo npx tsc --allowJs --checkJs --noEmit --project .
       shell: bash
-    - run: npx tsc --allowJs --checkJs --noEmit --lib ESNext --project .
+    - run: npx tsc --allowJs --checkJs --noEmit --project .
       shell: bash
