@@ -14,6 +14,76 @@ Node.js utilities - projects shared configuration
 
     $ npx nodutilus all
 
+Пример настройки GitHub Actions в [main.yml](.github/workflows/main.yml):
+
+
+```yaml
+name: Checks ➜ Tests ➜ Publish
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  eslint:
+    name: ESLint Checking
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-npm@main
+      - uses: nodutilus/project-config/actions/eslint@main
+      - uses: nodutilus/project-config/actions/eslintcc@main
+
+  types:
+    name: Types Checking
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-npm@main
+      - uses: nodutilus/project-config/actions/ts-check@main
+
+  tests:
+    name: Test on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-npm@main
+      - uses: nodutilus/project-config/actions/test@main
+
+  coverage:
+    name: Coverage Checking
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-npm@main
+      - uses: nodutilus/project-config/actions/c8@main
+
+  build-and-publish:
+    name: Build & Publish
+    needs: [eslint, types, tests, coverage]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: nodutilus/project-config/actions/setup-node-latest@main
+      - uses: nodutilus/project-config/actions/setup-npm@main
+      - uses: nodutilus/project-config/actions/npm-publish@main
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+```
+
 ## ESLint [![][badge_eslint]][npm_eslint] [![][badge_standard]][npm_standard] [![][badge_jsdoc]][npm_jsdoc]
 
 Конфиг для статического анализа модулей в формате [ESM](https://nodejs.org/api/esm.html)
@@ -179,10 +249,6 @@ jobs:
     steps:
       - uses: nodutilus/project-config/actions/c8@main
 ```
-
-## Пример настройки проекта
-
--   [nodutilus/.github/workflows/checks-and-tests.yml](https://github.com/nodutilus/nodutilus/blob/master/.github/workflows/checks-and-tests.yml)
 
 [npmbadge]: https://img.shields.io/npm/v/@nodutilus/project-config
 
