@@ -1,12 +1,21 @@
 name: Checks ➜ Tests ➜ Publish
 
 on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      publish:
+        description: "Флаг включения автоматической публикации модулей найденных в репозитории"
+        default: true
+        required: false
+        type: boolean
+      publish_branche:
+        description: "Имя ветки, из который выполняется публикация модулей"
+        default: "main"
+        required: false
+        type: string
+    secrets:
+      NPM_TOKEN:
+        required: false
 
 jobs:
   eslint:
@@ -53,7 +62,7 @@ jobs:
   build-and-publish:
     name: Build & Publish
     needs: [eslint, types, tests, coverage]
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && inputs.publish && github.ref_name == inputs.publish_branche
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
