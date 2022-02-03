@@ -1,6 +1,6 @@
 {
   "name": "@nodutilus/project-config",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Node.js utilities - projects shared configuration",
   "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
@@ -43,6 +43,7 @@
     "@actions/github": "latest"
   },
   "scripts": {
+    "build": "node test/build",
     "pre-test": "node test/pre-test",
     "test": "node test",
     "post-test": "node test/post-test"

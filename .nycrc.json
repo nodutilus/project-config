@@ -9,6 +9,7 @@
     "eslint-config/**",
     "bin/all.js",
     "bin/test.js",
+    "test/build.js",
     "test/pre-test.js"
   ]
 }
