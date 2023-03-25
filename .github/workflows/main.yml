@@ -10,6 +10,6 @@ on:
 
 jobs:
   main:
-    uses: nodutilus/project-actions/main.yml@test
+    uses: nodutilus/project-actions/.github/workflows/main.yml@test
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
