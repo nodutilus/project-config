@@ -17,7 +17,7 @@ console.log(`
     $ npx nodutilus eslint
 
   ESLintCC - оценка сложности кода:
-    $ npx nodutilus eslintсс
+    $ npx nodutilus eslintcc
 
   Type Checking (with TypeScript) - Статическая проверка типов в коде:
     $ npx nodutilus ts-check

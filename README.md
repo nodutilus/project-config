@@ -90,7 +90,7 @@ jobs:
 
 #### Локально
 
-    $ npx nodutilus eslintсс
+    $ npx nodutilus eslintcc
 
 #### GitHub Actions
 
@@ -99,7 +99,7 @@ name: Checks
 jobs:
   checks:
     steps:
-      - uses: nodutilus/project-config/actions/eslintсс@main
+      - uses: nodutilus/project-config/actions/eslintcc@main
 ```
 
 ## Type Checking JavaScript [![][badge_ts]][npm_ts]
