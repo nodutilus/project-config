@@ -3,5 +3,5 @@ description: Run tests in Node.js environment, using `npm run` with `test`, `pre
 author: IgorNovozhilov
 
 runs:
-  using: node12
+  using: node16
   main: test.cjs
