@@ -1,6 +1,5 @@
 /.github
 /.vscode
-/actions
 /coverage
 /eslint-config
 /test

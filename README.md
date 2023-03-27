@@ -14,8 +14,7 @@ Node.js utilities - projects shared configuration
 
     $ npx nodutilus all
 
-Пример настройки GitHub Actions из [self.yml](.github/workflows/self.yml) использующий [main.yml](.github/workflows/main.yml):
-
+Пример настройки GitHub Actions из [nodutilus/project-config](.github/workflows/main.yml):
 
 ```yaml
 name: Checks ➜ Tests ➜ Publish
@@ -30,7 +29,7 @@ on:
 
 jobs:
   main:
-    uses: nodutilus/project-config/.github/workflows/main.yml@main
+    uses: nodutilus/project-actions/.github/workflows/main.yml@main
     with:
       publish: true
       publish_branche: main
@@ -74,7 +73,7 @@ name: Checks
 jobs:
   checks:
     steps:
-      - uses: nodutilus/project-config/actions/eslint@main
+      - uses: npx nodutilus eslint
 ```
 
 ## ESLintCC [![][badge_eslintcc]][npm_eslintcc]
@@ -99,7 +98,7 @@ name: Checks
 jobs:
   checks:
     steps:
-      - uses: nodutilus/project-config/actions/eslintcc@main
+      - uses: npx nodutilus eslintcc
 ```
 
 ## Type Checking JavaScript [![][badge_ts]][npm_ts]
@@ -132,7 +131,7 @@ name: Checks
 jobs:
   checks:
     steps:
-      - uses: nodutilus/project-config/actions/ts-check@main
+      - uses: npx nodutilus ts-check
 ```
 
 ## Run tests
@@ -167,7 +166,7 @@ name: Tests
 jobs:
   tests:
     steps:
-      - uses: nodutilus/project-config/actions/test@main
+      - uses: npx nodutilus test
 ```
 
 ## Code coverage with c8 [![][badge_c8]][npm_c8]
@@ -201,7 +200,7 @@ name: Coverage
 jobs:
   coverage:
     steps:
-      - uses: nodutilus/project-config/actions/c8@main
+      - uses: npx nodutilus c8
 ```
 
 [npmbadge]: https://img.shields.io/npm/v/@nodutilus/project-config

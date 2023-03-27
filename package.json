@@ -35,9 +35,7 @@
     "@types/node": "latest"
   },
   "devDependencies": {
-    "@nodutilus/fs": "latest",
-    "@actions/core": "latest",
-    "@actions/github": "latest"
+    "@nodutilus/fs": "latest"
   },
   "scripts": {
     "build": "node test/build",
