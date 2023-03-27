@@ -2,13 +2,10 @@ module.exports = {
   plugins: ['jsdoc'],
   extends: 'plugin:jsdoc/recommended',
   rules: {
-    'jsdoc/require-jsdoc': ['warn', { // https://www.npmjs.com/package/eslint-plugin-jsdoc#require-jsdoc
-      require: {
-        FunctionDeclaration: true,
-        ClassDeclaration: true,
-        MethodDefinition: true
-      }
-    }]
+    'jsdoc/require-jsdoc': 0,
+    'jsdoc/require-param-description': 0,
+    'jsdoc/require-returns-description': 0,
+    'jsdoc/require-property-description': 0
   },
   settings: {
     jsdoc: {
