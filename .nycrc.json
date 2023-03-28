@@ -5,7 +5,6 @@
   "functions": 100,
   "statements": 100,
   "exclude": [
-    "actions/**",
     "eslint-config/**",
     "bin/all.js",
     "bin/test.js",
