@@ -1,6 +1,6 @@
 {
   "name": "@nodutilus/project-config",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Node.js utilities - projects shared configuration",
   "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
@@ -19,12 +19,9 @@
     "nodutilus": "./cli.js"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "dependencies": {
-    "@babel/core": "latest",
-    "@babel/eslint-parser": "latest",
-    "@babel/plugin-proposal-class-properties": "latest",
     "@nodutilus/eslint-config": "latest",
     "c8": "latest",
     "eslint": "latest",
@@ -38,9 +35,7 @@
     "@types/node": "latest"
   },
   "devDependencies": {
-    "@nodutilus/fs": "latest",
-    "@actions/core": "latest",
-    "@actions/github": "latest"
+    "@nodutilus/fs": "latest"
   },
   "scripts": {
     "build": "node test/build",

@@ -1,5 +1,5 @@
 import { TestClassProperties } from './extpkg/class-properties.js'
-
+import './brwsrpkg/window.js'
 
 const tcp = new TestClassProperties()
 
