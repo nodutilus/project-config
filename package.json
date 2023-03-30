@@ -1,6 +1,6 @@
 {
   "name": "@nodutilus/project-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Node.js utilities - projects shared configuration",
   "repository": "github:nodutilus/project-config",
   "license": "Unlicense",
@@ -13,7 +13,7 @@
     "./eslint/node-base": "./eslint/node-base.cjs",
     "./eslint/node-latest": "./eslint/node-latest.cjs",
     "./nyc": "./nyc.json",
-    "./tsconfig": "./package.json"
+    "./tsconfig": "./tsconfig.json"
   },
   "bin": {
     "nodutilus": "./cli.js"
