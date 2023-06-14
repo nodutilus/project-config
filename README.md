@@ -31,6 +31,11 @@ jobs:
   main:
     uses: nodutilus/project-actions/.github/workflows/main.yml@main
     with:
+      eslint: true
+      eslintcc: true
+      types: true
+      tests: true
+      coverage: true
       publish: true
       publish_branche: main
     secrets:
