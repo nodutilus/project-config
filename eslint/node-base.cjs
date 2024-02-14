@@ -38,7 +38,16 @@ module.exports = {
       after: true
     }],
     'object-shorthand': 'warn', //                https://eslint.org/docs/rules/object-shorthand
-    'prefer-destructuring': 'warn', //            https://eslint.org/docs/rules/prefer-destructuring
+    'prefer-destructuring': ['warn', { //         https://eslint.org/docs/rules/prefer-destructuring
+      VariableDeclarator: {
+        array: true,
+        object: true
+      },
+      AssignmentExpression: {
+        array: false,
+        object: false
+      }
+    }, { enforceForRenamedProperties: false }],
     'no-var': 'error', //                          https://eslint.org/docs/rules/no-var
     'require-await': 'error', //                   https://eslint.org/docs/rules/require-await
     'wrap-regex': 'error', //                      https://eslint.org/docs/rules/wrap-regex
